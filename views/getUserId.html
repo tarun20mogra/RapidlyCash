@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Rapidly Reset Password</title>
+
+
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.2.2/rzslider.min.css">
+
+    <link rel="stylesheet" href="../stylesheets/forgotPassword.css">
+</head>
+
+<body ng-controller="get_user_id_controller">
+<div class="background"></div>
+<div class="wrapper">
+    <form class="form-forgot-password">
+        <h2 class="form-signin-heading">Get User ID</h2>
+
+        <input type="email" class="form-control" ng-model="email" placeholder="Enter Email Address" required="" autofocus="" />
+        <button class="btn btn-lg btn-primary btn-block" type="button" ng-click="getUserId()" >Get User Id</button>
+    </form>
+
+</div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script  type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-cookies.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+<script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
+<script type="text/javascript" src="../js/ng-file-upload.min.js"></script>
+<script type="text/javascript" src="../js/ng-file-upload-shim.min.js"></script>
+<script type="text/javascript" src="../js/ng-file-model.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.2.2/rzslider.min.js"></script>
+<script type="text/javascript" src="../controller/controller.js"></script>
+</body>
+</html>

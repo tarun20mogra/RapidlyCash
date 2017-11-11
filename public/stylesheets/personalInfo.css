@@ -1,0 +1,37 @@
+body{
+    background-image: url("../images/shutterstock_524615173.jpg");
+    background-repeat: repeat-x;
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-size: cover;
+    position: relative;
+}
+.personal_info_card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    max-width: 380px;
+    padding: 20px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.11);
+}
+.logo{
+    background-image: url("../images/Logo.png");
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    background-size: cover;
+}
+.logoName{
+    position : absolute;
+    margin: 17px;
+    margin-left: 4px;
+    left: 100px;
+    color: black;
+    opacity: 0.7;
+
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+

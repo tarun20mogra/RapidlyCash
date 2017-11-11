@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>RapidlyTax</title>
+    <!--making the website responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.2.2/rzslider.min.css">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/login.css">
+</head>
+<body >
+<div class="blurBack"></div>
+<div class="logo pull-left"></div>
+<div class="logoName">RapidlyCash</div>
+
+<div class="wrapper" ng-controller="login_controller" >
+    <form class="form-signin">
+        <h2 class="heading">Rapidly login</h2>
+        <input type="text" class="form-control" ng-model="Username"  placeholder="Username" required="" autofocus="" />
+
+        <input type="password" class="form-control" ng-model="Password" placeholder="Password" required="" autofocus="" />
+        <label class="checkbox">
+            <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+        </label>
+        <button class="btn btn-lg btn-primary btn-block" type="button" ng-click="login()">Login</button>
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" align="center" ng-controller="make_registration_controller">
+                <a href="../views/registration.html" ng-click="registration()" style="color: lightgrey">Register</a>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" align="center">
+                <a href="../views/forgotPassword.html" ng-click="forgotPassword()" style="color: lightgrey">Forgot Username or password </a>
+
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script  type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-cookies.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.2.2/rzslider.min.js"></script>
+<script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
+<script type="text/javascript" src="../js/ng-file-upload.min.js"></script>
+<script type="text/javascript" src="../js/ng-file-upload-shim.min.js"></script>
+<script type="text/javascript" src="../js/ng-file-model.js"></script>
+<script type="text/javascript" src="../controller/controller.js"></script></body>
+
+</body>
+</html>

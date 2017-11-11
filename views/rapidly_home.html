@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Rapidly Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.2.2/rzslider.min.css">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/home.css">
+
+</head>
+<body ng-controller="home_page_controller" class="">
+
+<div class="container">
+    <div class="body-card">
+        <div class="row rapidly_home_body no_margin">
+            <div class="row no_margin">
+                <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6  logo" align="left">
+                    <img src="../images/Logo.png" style="height : 50px ; width:50px">
+                    <p style="display: inline; color:grey">RapidlyCash</p>
+
+                </div>
+                <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6 sing-in-link" align="right">
+                    <div ng-show="userLogin" align="right" style="color: white">
+                        Already a user:
+                        <a href="../views/index.html">Sign in</a>
+                    </div>
+
+                    <div>
+                        <button type="button" class="btn btn-primary btn-block button-widht" ng-show="userLogout"
+                                ng-click="logout()">Logout
+                        </button>
+                        <div  ng-show="user_welcome_note" style="color: white">
+                            Welcome to RapidlyCash :
+                            <label>{{userid}}</label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div align="center" style="color: white" >
+                <h1>Welcome to RapidlyCash</h1>
+                <div></div>
+                <p>Please select the cash amount you would like and select how quickly you would like to receive it.</p>
+
+            </div>
+
+        </div>
+        <form class="form-submit-loan">
+            <div class="row no_margin">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="loan-selection">
+                        <rzslider
+                                rz-slider-model="loanSliderValue"
+                                rz-slider-options="{floor: 0, ceil: 500, step:100}"></rzslider>
+                        <div class="form-group">
+                            <label for="selection">Your Selection:</label>
+                            <input id="selection" type="text" class="form-control" name="loanSliderValue"
+                                   ng-model="loanSliderValue">
+                        </div>
+                        <div class="form-group">
+                            <label for="fee">Fee:</label>
+                            <input id="fee" type="text" class="form-control" name="loanSliderValue"
+                                   ng-model="loanSliderValue * 0.4">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="loan-selection">
+                        <p><br/>Select the availability of the loan : </p>
+                        <div class="radio"  data-target="#return_loan_info" data-toggle="collapse">
+                            <label><input type="radio" name="availability" value="Instant"
+                                          ng-model="availability_of_loan"
+                                          ng-click="calculate_total_repayment_amount()"/>Instantly</label></div>
+                        <div class="radio" data-target="#return_loan_info" data-toggle="collapse">
+                            <label><input type="radio" name="availability" value="Within 24 Hours"
+                                          ng-model="availability_of_loan"
+                                          ng-click="calculate_total_repayment_amount()"/>Within
+                                24 Hours</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="payment">Total Repayment Amount:</label>
+                            <input id="payment" type="text" class="form-control" ng-model="total_repayment_amount">
+                        </div>
+                        <div id="return_loan_info" class="collapse">
+                            <p> Please Review the <a href = "" data-target="#return_policy"
+                                                     data-toggle="modal"> Pricing and Terms </a></p>
+                        </div>
+                        <div class="modal" id="return_policy" tabindex="-1">
+                            <div class="modal-dialog" style="background-color: white">
+                                <div class="modal-header">
+                                    <button class="close" data-dismiss="modal">&times;</button>
+                                    <P>Pricing and Terms</P>
+                                </div>
+                                <div class="modal-body" style="height: 700px ; width :200px">
+                                    <img src="../images/return_policy.jpg" style="height: 780px ; width: 550px">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="row no_margin" align="middle">
+                <button type="submit" class="btn btn-lg btn-primary btn-block button-widht" data-target="#thankyouModal"
+                        data-toggle="modal"
+                        ng-show="submit_request_show"
+                        ng-click="submit_request()">Next Step
+                </button>
+                <div class="modal" ng-show = "thankuModal" id="thankyouModal" tabindex="-1">
+                    <div class="modal-dialog" style="background-color: white">
+                        <div class="modal-header">
+
+                            <p ng-show="errorModal">Error</p>
+                            <p ng-show="amountErrormodal">Error</p>
+                        </div>
+                        <div class="modal-body">
+
+                            <p ng-show="errorModal">Please check the loan availability you want !</p>
+                            <p ng-show="amountErrormodal">Please select some amount to get loan </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div ng-show="sign_up_user" class="sign-up-form">
+                    <a href="../views/registration.html" class="">Sign up to submit request for loan</a>
+                </div>
+            </div>
+        </form>
+        <div class="row body-footer">
+            <p>By accepting a cash advance from RapidlyCash you are accepting the obligation to pay all fees when due or authorize Rapidly Tax to e-file your tax return at no additional charge beyond the amount owed plus 5 percent.</p>
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-cookies.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
+<script type="text/javascript" src="../js/ng-file-upload.min.js"></script>
+<script type="text/javascript" src="../js/ng-file-upload-shim.min.js"></script>
+<script type="text/javascript" src="../js/ng-file-model.js"></script>
+
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.2.2/rzslider.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+<script type="text/javascript" src="../controller/controller.js"></script>
+</body>
+</html>

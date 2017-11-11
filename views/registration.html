@@ -1,0 +1,51 @@
+<!--/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/-->
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+
+
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.2.2/rzslider.min.css">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/login.css">
+</head>
+
+<body>
+<div class="blurBackRegistration"></div>
+<div class="logo pull-left"></div>
+<div class="logoName">RapidlyCash</div>
+<div class="wrapper" ng-controller="registration_controller">
+    <form class="form-signin" name="registrationForm">
+        <h2 class="heading">Register</h2>
+        <input type="text" class="form-control" ng-model="register_username" placeholder="User Name" required="" autofocus="" />
+        <input type="email" class="form-control" ng-model="register_email" placeholder="Email Address" required="" autofocus="" />
+       <input data-target="#password_info" data-toggle="collapse" type="password" id="password" class="form-control"
+              ng-model="register_password" placeholder="Password" name="passwordRegistration" ng-pattern="/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/" required=""/>
+        <div id="password_info" class="collapse" style="color: white">
+           <p style="opacity: 1"  > Must be at least 8 characters, include numbers, one upper case letter, one lower case letters and a special character.</p>
+        </div>
+        <input type="password" class="form-control" ng-model="register_re_password" placeholder="Re-Type Password" required=""/>
+        <button class="btn btn-lg btn-primary btn-block"  type="button" ng-click="register()">Register</button>
+        <label class="terms-and-condition"><input type="checkbox" name = "termsAndCondition" ng-model="termsAndCondition">I certify that all the information I enter is true, and I agree to the
+            <a ng-click="terms_Condition()">Terms of service and privacy policy </a>, and consent to electronic disclosures. </label>
+
+    </form>
+
+</div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script  type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-cookies.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.2.2/rzslider.min.js"></script>
+<script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
+<script type="text/javascript" src="../js/ng-file-upload.min.js"></script>
+<script type="text/javascript" src="../js/ng-file-upload-shim.min.js"></script>
+<script type="text/javascript" src="../js/ng-file-model.js"></script>
+<script type="text/javascript" src="../controller/controller.js"></script>
+</body>
+</html>

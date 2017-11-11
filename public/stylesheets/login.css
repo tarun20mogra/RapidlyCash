@@ -1,0 +1,123 @@
+body {
+
+
+}
+.logo{
+    background-image: url("../images/Logo.png");
+    height: 50px;
+    width: 50px;
+    position: absolute;
+
+    background-size: cover;
+}
+.logoName{
+    position : absolute;
+    margin: 17px;
+    margin-left: 4px;
+    left: 100px;
+    color: white;
+    opacity: 0.7;
+
+}
+.wrapper {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    position: absolute;
+    right: 50px ;
+    opacity: 1;
+    z-index: 1000;
+
+}
+.blurBack {
+    background-image: url("../images/index_page_image.jpeg");
+
+    /*background-repeat: repeat-x;*/
+    height: 100%;
+    background-size: cover;
+    /*position: relative;*/
+    /*height:500px;*/
+    width:100%;
+    text-align:center;
+    /*background-size:cover;*/
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
+    position: absolute;
+    left:0;
+    top: 0;
+}
+.blurBackRegistration{
+    background-image: url("../images/family.jpeg");
+
+    /*background-repeat: repeat-x;*/
+    height: 100%;
+    background-size: cover;
+    /*position: relative;*/
+    /*height:500px;*/
+    width:100%;
+    text-align:center;
+    /*background-size:cover;*/
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
+    position: absolute;
+    left:0;
+    top: 0;
+}
+
+.form-signin {
+    width: 380px;
+
+    padding: 15px 35px 45px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+.form-signin:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.form-signin ,
+.form-signin .checkbox {
+    margin-bottom: 30px;
+}
+.form-signin .checkbox {
+    font-weight: normal;
+}
+.form-signin .form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+.form-signin input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"] {
+    margin-bottom: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.heading{
+    margin-bottom: 30px;
+    color: white;
+}
+.terms-and-condition{
+    font-family: "Century Gothic";
+}

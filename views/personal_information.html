@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Information</title>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.2.2/rzslider.min.css">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/personalInfo.css">
+</head>
+
+<body>
+<div class="logo pull-left"></div>
+<div class="logoName">RapidlyCash</div>
+<div class="personal_info_card" align="center" ng-controller="personal_info_form_controller">
+    <form class="form-submit-personalInfo">
+        <div >
+
+                <h2 class="form-signin-heading" style="background-color: #d3d3d3">General Information</h2>
+                <input type="text" class="form-control" ng-model="full_name" placeholder="Full Name *" required="" autofocus=""/>
+                <input type="number" class="form-control" ng-model="phone_number" placeholder="Phone number *" required="" autofocus=""/>
+                <input type="text" class="form-control" ng-model="address" placeholder="Address *" required=""/>
+                <input type="text" class="form-control" ng-model="city" placeholder="city *" required=""/>
+                <input type="text" class="form-control" ng-model="state" placeholder="State *" required=""/>
+                <input type="number" class="form-control" ng-model="pin_code" placeholder="Zip-code *" required=""/>
+
+        </div>
+        <div >
+
+                <h2 class="form-signin-heading" style="background-color: #d3d3d3">Personal Information</h2>
+                <input type="text" class="form-control" ng-model="company_name" placeholder="Company Name *" required="" autofocus=""/>
+                <input type="text" class="form-control"  ng-model="employer_name" placeholder="Employer Name *" required="" autofocus=""/>
+                <input type="text" class="form-control"  ng-model="employer_contact" placeholder="Employer Contact *" required="" autofocus=""/>
+
+        </div>
+        <div >
+
+                <h2 class="form-signin-heading" style="background-color: #d3d3d3">Other Information</h2>
+                <textarea class="form-control" ng-model="reason_for_loan" placeholder="Reason for loan" required="" autofocus=""></textarea>
+                <textarea class="form-control" ng-model="how_did_you_hear_about_us" placeholder="How did you hear about us?" required=""
+                          autofocus=""></textarea>
+
+        </div>
+        <div  ng-controller="personal_info_form_controller">
+
+                <button class="btn btn-lg btn-primary btn-block" type="button" ng-click="submitForm()">Submit Form</button>
+
+        </div>
+    </form>
+
+</div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-cookies.js"></script>
+<script  type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.2.2/rzslider.min.js"></script>
+<script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
+<script type="text/javascript" src="../js/ng-file-upload.min.js"></script>
+<script type="text/javascript" src="../js/ng-file-upload-shim.min.js"></script>
+<script type="text/javascript" src="../js/ng-file-model.js"></script>
+<script type="text/javascript" src="../controller/controller.js"></script>
+</body>
+</body>
+</html>

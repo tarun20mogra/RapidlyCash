@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Approval</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.2.2/rzslider.min.css">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/home.css">
+
+</head>
+<body ng-controller="loan_approval_controller" class="">
+
+<div class="container">
+    <div class="body-card">
+        <div class="row rapidly_home_body no_margin">
+            <div class="row no_margin">
+                <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6  logo" align="left">
+                    <img src="../images/Logo.png" style="height : 50px ; width:50px">
+                    <p style="display: inline; color:grey">RapidlyCash</p>
+
+                </div>
+            </div>
+            <div align="center" style="color: white" >
+                <h1>CONGRATS!!</h1>
+                <h5>Your bank information has been approved and now you are the legitimate user of RapidlyCash to get our serviced.</h5>
+            </div>
+
+        </div>
+        <form class="form-submit-loan">
+            <div class="row no_margin">
+                <div>
+
+
+                    <p><h3>Congratulations !</h3></p>
+                    <p>You have been authorized to get loan from our company. Are you sure you want to generate the request for loan? </p>
+
+                </div>
+            </div>
+            <div class="row no_margin" align="middle">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <button type="submit" class="btn btn-lg btn-primary btn-block button-widht" data-target="#thankyouModal"
+                            data-toggle="modal">ACCEPT
+                    </button>
+                    <div class="modal" id="thankyouModal" tabindex="-1">
+                        <div class="modal-dialog" style="background-color: white">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <p>CONGRATS!!</p>
+
+                            </div>
+                            <div class="modal-body">
+
+                                <p>You have been approved for getting loan. Someone from our team will soon contact you</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <button type="submit" class="btn btn-lg btn-primary btn-block button-widht" data-target="#DenyModal"
+                            data-toggle="modal">DENY
+                    </button>
+                    <div class="modal" id="DenyModal" tabindex="-1">
+                        <div class="modal-dialog" style="background-color: white">
+                            <div class="modal-header">
+
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <p>OOPS!!</p>
+                            </div>
+                            <div class="modal-body">
+
+                                <p>We appreciate you time and consideration to visit our website. </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-cookies.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
+<script type="text/javascript" src="../js/ng-file-upload.min.js"></script>
+<script type="text/javascript" src="../js/ng-file-upload-shim.min.js"></script>
+<script type="text/javascript" src="../js/ng-file-model.js"></script>
+
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.2.2/rzslider.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+<script type="text/javascript" src="../controller/controller.js"></script>
+</body>
+</html>

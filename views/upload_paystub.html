@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Rapidly Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.2.2/rzslider.min.css">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/home.css">
+
+</head>
+<body ng-controller="upload_paystub_controller" class="">
+
+<div class="container">
+    <div class="body-card">
+        <div class="row rapidly_home_body no_margin">
+            <div class="row no_margin">
+                <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6  logo" align="left">
+                    <img src="../images/Logo.png" style="height : 50px ; width:50px">
+                    <p style="display: inline; color:grey">RapidlyCash</p>
+
+                </div>
+                <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6 sing-in-link" align="right">
+                     <div>
+                        <button type="button" class="btn btn-primary btn-block button-widht" ng-show="userLogout"
+                                ng-click="logout()">Logout
+                        </button>
+                        <div  ng-show="user_welcome_note" style="color: white">
+                            Welcome to RapidlyCash :
+                            <label>{{userid}}</label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div align="center" style="color: white" >
+                <h1>Welcome to RapidlyCash</h1>
+                <div></div>
+                <p>Please upload your paystub.</p>
+
+            </div>
+
+        </div>
+        <form class="form-submit-loan">
+            <div class="row no_margin">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                        <label for="usr">Tax Refund (If any, how much was your previous year's tax refund before fees? If none then put N/A):</label>
+                        <input type="text"
+                               class="form-control"
+                               id="usr">
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div>
+                        <p>Upload your pay stub for the security purpose.<a href = "" data-target="#paystubinfo"
+                                                                            data-toggle="modal">Click for more info</a></p>
+                        <div class="modal fade"  id="paystubinfo" tabindex="-1">
+                            <div class="modal-dialog" style="background-color: white">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <p>Upload Information</p>
+
+
+
+                                </div>
+                                <div class="modal-body">
+
+                                    <p>Please take a picture of your most recent paystub to verify your income</p>
+                                    <p><b>For example, the four digits of the bank account you receive a direct deposit must match the bank account associated with your RapidlyCash Advance application.</b></p>
+                                    <p>Acceptatble formate of the file .pdf only</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <input
+                                type="file"
+                                ngf-select
+                                id="upload_paystub"
+                                fileread="up.file"
+                                name="file"
+                                accept="application/pdf"
+                        />
+                    </div>
+                </div>
+
+            </div>
+            <div class="row no_margin" align="middle">
+                <button type="submit" class="btn btn-lg btn-primary btn-block button-widht" ng-show ="nextStep" ng-click="submitPayStub()">Next Step</button>
+            </div>
+            <div ng-show="login_first" class="sign-up-form">
+                <strong><a href="index.html">Login to go to next step</a></strong>
+            </div>
+        </form>
+        <div class="row body-footer">
+            <p>By accepting a cash advance from RapidlyCash you are accepting the obligation to pay all fees when due or authorize Rapidly Tax to e-file your tax return at no additional charge beyond the amount owed plus 5 percent.</p>
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-cookies.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.2.2/rzslider.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+<script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
+<script type="text/javascript" src="../js/ng-file-upload.min.js"></script>
+<script type="text/javascript" src="../js/ng-file-upload-shim.min.js"></script>
+<script type="text/javascript" src="../js/ng-file-model.js"></script>
+<script type="text/javascript" src="../controller/controller.js"></script>
+</body>
+</html>
